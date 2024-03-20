@@ -1,6 +1,6 @@
 """Launch an ipython kernel."""
 import sys
-sys.path.append('/opt/spark/work-dir/python/scripts/lib/')
+sys.path.append('/mnt/python/lib/')
 import argparse
 import base64
 import json
