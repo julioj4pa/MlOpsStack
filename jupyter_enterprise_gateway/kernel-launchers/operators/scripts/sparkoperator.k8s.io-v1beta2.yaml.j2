@@ -51,9 +51,13 @@ spec:
       - name: "nfsshare"
         mountPath: "/opt/spark/work-dir/python/scripts/"
         subPath: "git/git-sync/spark/python/scripts/"
+    lifecycle:
+      postStart:
+        exec:
+          command: ["/bin/sh", "-c", "ln -s /mnt/jars/*.jar /opt/spark/jars/"]
     cores: 1
-    coreLimit: 1000m
-    memory: 1g
+    #coreLimit: 1000m
+    memory: 1024m
   executor:
     env:
 # Add any custom envs here that aren't already configured for the kernel's environment
@@ -76,10 +80,14 @@ spec:
       - name: "nfsshare"
         mountPath: "/opt/spark/work-dir/python/scripts/"
         subPath: "git/git-sync/spark/python/scripts/"
+    lifecycle:
+      postStart:
+        exec:
+          command: ["/bin/sh", "-c", "ln -s /mnt/jars/*.jar /opt/spark/jars/"]
     instances: 1
     cores: 1
-    coreLimit: 1000m
-    memory: 1g
+    #coreLimit: 1000m
+    memory: 1024m
 {% if kernel_sparkapp_config_map %}
   sparkConfigMap: {{ kernel_sparkapp_config_map }}
 {% endif %}
