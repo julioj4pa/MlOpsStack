@@ -1,12 +1,12 @@
 {
     "language": "python",
-    "display_name": "Spark Operator (Python)",
+    "display_name": "Spark H2o Operator (Python)",
     "metadata": {
       "process_proxy": {
         "class_name": "enterprise_gateway.services.processproxies.spark_operator.SparkOperatorProcessProxy",
         "config": {
-          "image_name": "spark:python3-java17",
-          "executor_image_name": "spark:python3-java17"
+          "image_name": "spark:3.5.1-scala2.12-java11-python3-ubuntu",
+          "executor_image_name": "spark:3.5.1-scala2.12-java11-python3-ubuntu"
         }
       }
     },
