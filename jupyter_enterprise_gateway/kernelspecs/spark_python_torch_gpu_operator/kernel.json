@@ -1,12 +1,12 @@
 {
     "language": "python",
-    "display_name": "Spark GPU Operator (Python)",
+    "display_name": "Spark GPU Operator (PythonTF)",
     "metadata": {
       "process_proxy": {
         "class_name": "enterprise_gateway.services.processproxies.spark_operator.SparkOperatorProcessProxy",
         "config": {
-          "image_name": "nvidia-rapids-spark:latest",
-          "executor_image_name": "nvidia-rapids-spark:latest"
+          "image_name": "nvidia-spark-torch:latest",
+          "executor_image_name": "nvidia-spark-torch:latest"
         }
       }
     },

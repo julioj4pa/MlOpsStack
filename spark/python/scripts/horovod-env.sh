@@ -11,7 +11,7 @@ export HOROVOD_DEBUG=1
 #HOROVOD_BUILD_ARCH_FLAGS - additional C++ compilation flags to pass in for your build architecture.
 
 #HOROVOD_CUDA_HOME - path where CUDA include and lib directories can be found.
-export HOROVOD_CUDA_HOME=/opt/conda/targets/x86_64-linux
+export HOROVOD_CUDA_HOME=/usr/local/cuda-12.5
 #HOROVOD_BUILD_CUDA_CC_LIST - List of compute capabilities to build Horovod CUDA kernels for (example: HOROVOD_BUILD_CUDA_CC_LIST=60,70,75) https://github.com/NVIDIA/cuda-samples/tree/master/Samples/1_Utilities/deviceQuery
 export HOROVOD_BUILD_CUDA_CC_LIST=86
 #HOROVOD_NCCL_HOME - path where NCCL include and lib directories can be found.
@@ -46,6 +46,9 @@ export HOROVOD_GPU_OPERATIONS=NCCL
 #export HOROVOD_GPU_REDUCESCATTER=NCCL
 #HOROVOD_ALLOW_MIXED_GPU_IMPL - {1}. Allow Horovod to install with NCCL allreduce and MPI GPU allgather / broadcast / alltoall / reducescatter. Not recommended due to a possible deadlock.
 #export HOROVOD_ALLOW_MIXED_GPU_IMPL=0
+
+#export MPI_INCLUDE_PATH="/home/spark/openmpi-5.0.3/ompi/include"
+#export OPAL_PREFIX="/home/spark/openmpi-5.0.3/install"
 #HOROVOD_CPU_OPERATIONS - {MPI, GLOO, CCL}. Framework to use for CPU tensor allreduce, allgather, and broadcast.
 export HOROVOD_CPU_OPERATIONS=MPI
 #HOROVOD_CMAKE - path to the CMake binary used to build Horovod. Installed version cmake version 3.22.1
@@ -62,3 +65,5 @@ export HOROVOD_WITHOUT_PYTORCH=0
 export HOROVOD_WITH_MXNET=1
 #HOROVOD_WITHOUT_MXNET - {1}. Skip installing MXNet support.
 export HOROVOD_WITHOUT_MXNET=0
+
+#HOROVOD_NCCL_LINK=SHARED HOROVOD_NCCL_INCLUDE=/usr/include HOROVOD_NCCL_LIB=/usr/lib/x86_64-linux-gnu HOROVOD_GPU_OPERATIONS=NCCL python setup.py bdist_wheel
