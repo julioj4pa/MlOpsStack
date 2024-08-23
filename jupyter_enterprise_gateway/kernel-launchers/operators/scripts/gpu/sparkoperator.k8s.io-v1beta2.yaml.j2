@@ -58,6 +58,9 @@ spec:
     cores: 1
     #coreLimit: 1000m
     memory: 1024m
+    gpu:
+      name: "nvidia.com/gpu-2gb"
+      quantity: 1
   executor:
     env:
 # Add any custom envs here that aren't already configured for the kernel's environment

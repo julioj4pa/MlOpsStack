@@ -1,6 +1,6 @@
 {
     "language": "python",
-    "display_name": "Spark GPU Operator (PythonTF)",
+    "display_name": "Spark GPU Operator (PyTorch)",
     "metadata": {
       "process_proxy": {
         "class_name": "enterprise_gateway.services.processproxies.spark_operator.SparkOperatorProcessProxy",
