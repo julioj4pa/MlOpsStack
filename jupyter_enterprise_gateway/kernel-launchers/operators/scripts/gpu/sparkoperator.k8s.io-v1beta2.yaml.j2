@@ -59,7 +59,7 @@ spec:
     #coreLimit: 1000m
     memory: 1024m
     gpu:
-      name: "nvidia.com/gpu-2gb"
+      name: "nvidia.com/gpu"
       quantity: 1
   executor:
     env:
@@ -92,7 +92,7 @@ spec:
     #coreLimit: 1000m
     memory: 1024m
     gpu:
-      name: "nvidia.com/gpu-2gb"
+      name: "nvidia.com/gpu"
       quantity: 1
 {% if kernel_sparkapp_config_map %}
   sparkConfigMap: {{ kernel_sparkapp_config_map }}
